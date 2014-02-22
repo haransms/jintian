@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title><{$title}>_<{:C('SITE_TITLE')}></title>
+<meta name="keywords" content="<{:C('SITE_KEYWORD')}>">
+<meta name="description" content="<{:C('SITE_DESCRIPTION')}>">
+<meta name="author" content="<{:C('SITE_AUTHOR')}>">
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/core.css" />
+<script type="text/javascript">var MODULE = "__MODULE__";var CONTROLLER = "__CONTROLLER__";var ACTION = "__ACTION__";</script><block name="headcss"></block><block name="headjs"></block>
+<!--[if lt IE 9]>
+<script src="__PUBLIC__/js/html5shiv.js"></script>
+<script src="__PUBLIC__/js/respond.min.js"></script>
+<![endif]-->
+</head>
+<body>
+<div id="wrap">
+	<div class="container">
+		<div class="row">
+			<block name="top">
+					<div class="col-md-12">
+						<div class="navbar navbar-default navbar-fixed-top" style="margin-bottom:5px">
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+								<a class="navbar-brand" href="<{:U('/default')}>"><{:C('SITE_TITLE')}></a>
+							</div>
+							<div class="navbar-collapse collapse navbar-responsive-collapse">
+								<ul class="nav navbar-nav">
+									<li <if condition="MODULE_NAME eq 'Home' && CONTROLLER_NAME eq 'Index' && ACTION_NAME eq 'index'">class="active"</if>><a href="<{:U('/default')}>">首&nbsp;&nbsp;&nbsp;&nbsp;页</a></li>
+									<li <if condition="ACTION_NAME eq 'register'">class="active"</if>><a href="<{:U('/register')}>">公司简介</a></li>
+									<li><a href="#">公司产品</a></li>
+									<li><a href="#">金田合作社</a></li>
+									<!-- <li><a href="#">在线演示</a></li>
+									<li><a href="#">互动交流</a></li> -->
+									<li><a href="#">通知公告</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+			</block>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+	<block name="slider">
+		<div class="row" style="margin:0;padding:0;">
+			<div class="slider">
+				<div class="flexslider" id="mainslider" style="margin:0;padding:0;">
+					<ul class="slides">
+						<li class="sliders-li">
+							<img class="img-responsive" src="__PUBLIC__/images/slider_1.png" height="250"/>
+						</li>
+						<li class="sliders-li">
+							<img class="img-responsive" src="__PUBLIC__/images/slider_2.png"  height="250" />
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</block>
+	<div class="clearfix h10"></div>
+	<block name="main"></block>
+	<div class="clearfix"></div>
+</div>
+
+<div class="row" id="footer" style="margin:0;padding:0">
+	<p>
+		<ul class="list-inline list-unstyled text-center">
+			<li><a href="<{:U('/Admin')}>">管理</a></li>
+		</ul>
+	</p>
+</div>
+
+<script type="text/javascript" src="__PUBLIC__/js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/jquery.easing.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/jquery.mousewheel.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/jquery.form.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/jnotify.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/sco.message.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/front.js"></script><block name="customjs"></block>
+</body>
+</html>
