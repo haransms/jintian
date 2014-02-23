@@ -27,7 +27,7 @@ body {
 /* Set the fixed height of the footer here */
 #footer {
 	height: 60px;
-	background-color: #ddd;
+	background-color: #000;
 }
 
 .h10 {height:10px;}
